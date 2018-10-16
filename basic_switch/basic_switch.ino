@@ -1,6 +1,6 @@
 // basic momentary switch code to turn on an LED
 // An LED is wired in series to a 220ohm-1kohm resistor on pin 3
-// a momentary switch is connected to pin 2 with a 10k pulldown resistor
+// a momentary or maintained switch is connected to pin 2 with a 10k pulldown resistor
 
 const int switchPin = 2;
 const int ledPin = 3;

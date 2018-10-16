@@ -1,9 +1,9 @@
 // How to use a photocell as a switch
 // An LED is wired in series to a 220ohm-1kohm resistor on pin 3
-// a Photocell is connected to A0 in parallel with a 10k resistor
-// the circuit soends the first 5 seconnds after being powered on or reset
-// in a calibration mode. During this time, cover and uncover the sensor
-// the onboard LED stays on during the calibratin period
+// a Photo transistor is connected to A0 in parallel with a 10k pulldown
+// the circuit spends the first 5 seconds after being powered on or reset
+// in a calibration mode. During this time, cover and uncover the sensor.
+// the onboard LED stays on during the calibration period
 
 const int sensePin = A0;
 const int ledPin = 3;
