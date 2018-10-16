@@ -1,9 +1,9 @@
-// use a mometary switch as a toggle, or maintained switch
+// use a momentary switch as a toggle and count the number of presses
 // An LED is wired in series to a 220ohm-1kohm resistor on pin 3
 // a momentary switch is connected to pin 2 with a 10k pulldown resistor
 
 const int switchPin = 2; // the pin that the switch is attached to
-const int ledPin = 3; // the pin that the LED is attached to
+const int ledPin = 13; // the pin that the LED is attached to
 
 int switchVal = 0; // current switch state
 int prevSwitchVal = 0; // previous switch state
@@ -14,6 +14,7 @@ void setup() {
   // set the pins as inputs / outputs
   pinMode(switchPin, INPUT);
   pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -32,4 +33,8 @@ void loop() {
   }else{ // otherwise
     digitalWrite(ledPin, LOW); // turn the LED off
   }
+
+  prevSwitchVal = switchVal; // set the previous value for the next time thru the loop
+  Serial.print("toggle state : ");
+  Serial.println(toggleState);
 }
